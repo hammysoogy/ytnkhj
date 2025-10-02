@@ -12,7 +12,7 @@ from datetime import datetime, timedelta
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s]: %(message)s")
 
 # ---------- CONFIG (EDIT) ----------
-TOKEN = "MTQwMTU4MDMzOTI4NTA2NTg3MA.GNtNas.ga2I-SDxbMbjd4TX4kfWRuH-aBgUP1GYTdLsFs"
+TOKEN = "MTQwMTU4MDMzOTI4NTA2NTg3MA.GdAkEQ.EvGQ34eSX7eU9SafWxvmg6Vj059wb-ImOWPwt4"
 GUILD_ID = 1402880152505155647
 
 COOLDOWN_FILE = "cooldowns.json"
@@ -1638,5 +1638,6 @@ async def graceful_close():
     handle_shutdown()
     await original_close()
 bot.close = graceful_close
+
 
 bot.run(TOKEN)
