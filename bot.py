@@ -1,3 +1,17 @@
+from flask import Flask
+from threading import Thread
+
+app = Flask(__name__)
+
+@app.route('/')
+def home():
+    return "Hello World!"
+
+def run_web():
+    app.run(host='0.0.0.0', port=4000)  # Port can be changed if needed
+
+# Start the Flask server in the background
+Thread(target=run_web).start()
 
 import discord
 from discord.ext import commands, tasks
@@ -1642,4 +1656,5 @@ bot.close = graceful_close
 
 
 bot.run(TOKEN)
+
 
